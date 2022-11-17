@@ -53,6 +53,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
         PlayerRotate();
     }
 
+    public void Respawn()
+    {
+        controller.enabled = false;
+        transform.position = Vector3.up;
+        controller.enabled = true;
+    }
+
+
     private void FixedUpdate()
     {
         if (!pv.IsMine) return;
