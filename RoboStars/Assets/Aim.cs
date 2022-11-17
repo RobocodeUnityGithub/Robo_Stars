@@ -98,7 +98,9 @@ public class Aim : MonoBehaviour
             }
             else continue;
         }
+        if (allTarget.Count == 0) return;
         SelectNewTarget();
+
     }
     private void OnFire(InputAction.CallbackContext context)
     {
